@@ -38,65 +38,11 @@ The project uses TensorFlow/Keras to train a convolutional neural network and pr
 - TensorFlow CPU
 - Pillow
 
-Install dependencies:
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-If you are setting up the project from scratch, create a virtual environment first:
 
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-```
 
-## Check TensorFlow
-
-```powershell
-.\.venv\Scripts\python.exe check_tf.py
-```
-
-Expected output:
-
-```text
-Start
-TensorFlow OK
-```
-
-## Train the Model
-
-```powershell
-.\.venv\Scripts\python.exe train.py
-```
-
-This trains the CNN using images from the `Training` folder and validates using the `Testing` folder. After training, the model is saved as:
-
-```text
-brain_tumor_model.h5
-```
-
-## Test Model Loading
-
-```powershell
-.\.venv\Scripts\python.exe test_model.py
-```
-
-## Predict an Image
-
-Place the image as `test.jpg` in the project folder, then run:
-
-```powershell
-.\.venv\Scripts\python.exe predict.py
-```
-
-Example output:
-
-```text
-Prediction: no_tumor
-```
-
-## Notes
 
 - The project should be run using the `.venv` Python environment.
 - TensorFlow warning messages about CPU optimization or GPU support on Windows are informational and do not stop the project from running.
